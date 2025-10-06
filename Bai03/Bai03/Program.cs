@@ -49,7 +49,8 @@ namespace Bai03
         }
         static void Main(string[] args)
         {
-            Console.InputEncoding = Encoding.UTF8;
+            try{
+                  Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             Console.Write("Nhập ngày: ");
             int day = int.Parse(Console.ReadLine());
@@ -63,6 +64,12 @@ namespace Bai03
                 Console.WriteLine($"Ngày {day}/{month}/{year} hợp lệ");
             else
                 Console.WriteLine($"Ngày {day}/{month}/{year} không hợp lệ");
+            }
+         catch (Exception ex) { 
+       Console.WriteLine("Lỗi: "+ ex.Message);
+ }
+            
+         
         }
     }
 
