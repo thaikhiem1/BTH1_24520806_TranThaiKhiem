@@ -43,6 +43,7 @@ namespace Bai02
         }
         static void Main(string[] args)
         {
+            try{
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             int n;
@@ -51,6 +52,10 @@ namespace Bai02
             int Sumprime = SumPrime(n);
 
             Console.WriteLine("Tổng số nguyên tố < n: " + Sumprime);
+            }
+             catch (Exception ex) { 
+       Console.WriteLine("Lỗi: "+ ex.Message);
+ }
         }
     }
 }
