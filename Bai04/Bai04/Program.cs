@@ -48,7 +48,8 @@ namespace Bai04
         }
         static void Main(string[] args)
         {
-            Console.InputEncoding = Encoding.UTF8;
+            try{
+                 Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             Console.Write("Nhập tháng: ");
             int month = int.Parse(Console.ReadLine());
@@ -63,6 +64,10 @@ namespace Bai04
             {
                 Console.WriteLine($"{month}/{year} có {songay} ngày!");
             }
+            }
+            catch (Exception ex) { 
+       Console.WriteLine(ex.Message);
+ }   
         }
     }
 }
