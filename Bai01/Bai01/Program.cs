@@ -10,6 +10,7 @@ namespace Bai01
     internal class Program
     {
         //câu a: Tính tổng các số lẻ trong mảng:
+        
         static int TongSoLe(int[] number)
         {
             int sum = 0;
@@ -90,6 +91,7 @@ namespace Bai01
         static void Main(string[] args)
         {
             //câu a
+            try{
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
             int n;
@@ -125,7 +127,10 @@ namespace Bai01
             {
                 Console.WriteLine("Không tìm thấy số chính phương trong mảng: " + min_cp);
             }
-
+            }
+             catch (Exception ex) { 
+       Console.WriteLine("Lỗi: "+ ex.Message);
+ }
         }
     }
 }
