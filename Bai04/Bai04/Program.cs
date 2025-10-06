@@ -66,7 +66,7 @@ namespace Bai04
             }
             }
             catch (Exception ex) { 
-       Console.WriteLine(ex.Message);
+       Console.WriteLine("Lỗi: "+ ex.Message);
  }   
         }
     }
